@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+geopandas
+shapely
+rtree
+pyproj
+fiona
+python-multipart
+requests

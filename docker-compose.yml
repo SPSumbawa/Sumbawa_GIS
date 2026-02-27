@@ -1,0 +1,15 @@
+version: '3'
+services:
+  api:
+    build: .
+    image: sumbawa-gis-api
+    container_name: sumbawa-api
+    restart: always
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data_shps:/app/data_shps
+      - ./index_storage:/app/index_storage
+    environment:
+      - DATA_DIR=/app/data_shps
+      - INDEX_FILE=/app/index_storage/index.gpkg
